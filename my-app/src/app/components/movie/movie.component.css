@@ -15,3 +15,7 @@
   padding-bottom: 0;
   padding-top: 0;
 }
+
+.not-clickeable{
+  height: 55px;
+}

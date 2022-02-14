@@ -43,10 +43,10 @@ export class CartComponent implements OnInit {
   }
 
   getTotal() {
-    return this.movies
-      .map((movie) => movie.price)
-      .reduce((previousValue, currentValue) => previousValue + currentValue, 0)
-      .toString();
+    let total = this.movies.reduce((total, movie) => total + movie.price, 0);
+    console.log(total);
+    total = total*4;
+    return total;
   }
 
   deleteFromCart(id: string) {

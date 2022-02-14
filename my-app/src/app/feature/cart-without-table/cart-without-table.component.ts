@@ -32,9 +32,8 @@ export class CartWithoutTableComponent implements OnInit, OnDestroy {
     this.cartService.deleteFromCart(id);
   }
   getTotal() {
-    return this.movies
-      .map((movie) => movie.price)
-      .reduce((previousValue, currentValue) => previousValue + currentValue, 0)
-      .toString();
+    let total = this.movies.reduce((total, movie) => total + movie.price, 0);
+    console.log(total);
+    return total;
   }
 }
