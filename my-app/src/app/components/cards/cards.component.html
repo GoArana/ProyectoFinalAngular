@@ -1,12 +1,14 @@
 <div fxLayout="row wrap" class="w100">
   <app-movie
-    fxFlex="20%"
-    fxFlex.xs="100%"
-    fxFlex.sm="60%"
-    fxFlex.md="43%"
-    fxFlex.lg="35%"
-    *ngFor="let movie of movieList.reverse()"
-    [movie]="movie"
-    class="w110 p20"
+  fxFlex="20%"
+  fxFlex.xs="100%"
+  fxFlex.sm="60%"
+  fxFlex.md="43%"
+  fxFlex.lg="35%"
+  *ngFor="let movie of movieList.reverse()"
+  [movie]="movie"
+  class="w100 p20"
   ></app-movie>
 </div>
+
+

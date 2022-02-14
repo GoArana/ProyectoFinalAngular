@@ -20,7 +20,7 @@
     <ng-container matColumnDef="price">
       <th mat-header-cell *matHeaderCellDef>Cost</th>
       <td mat-cell *matCellDef="let movie">
-        {{ movie.price | currency }}
+        {{ movie.price*4 | currency }}
       </td>
       <td mat-footer-cell *matFooterCellDef></td>
     </ng-container>
