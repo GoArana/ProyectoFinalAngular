@@ -13,7 +13,7 @@
   </mat-card-header>
 
   <mat-card-actions class="d-flex-center-between actions-container">
-    <button mat-button [routerLink]="['/movie', movie.id]">
+    <button mat-raised-button [routerLink]="['/movie', movie.id]">
       Mas información
     </button>
     <button mat-fab [color]="isMovieInCart() ? 'warn' : 'primary'"aria-label="Add or delete from cart"(click)="togleMovieInCart()">
