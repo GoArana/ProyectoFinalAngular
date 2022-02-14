@@ -1,0 +1,21 @@
+<app-loading></app-loading>
+<mat-card class="example-card w80" *ngIf="!loading">
+  <div class="movie-container" fxLayout="row">
+    <div fxFlex="grow">
+      <div class="w100 jc-center my30 video-container">
+        <iframe [src]="safeURL" frameborder="0" allowfullscreen class="w100"
+        ></iframe>
+      </div>
+      <h2 class="title">{{ movie.name }}</h2>
+      <h4>{{ movie.detail.category }}</h4>
+      <app-movie-details [detail]="movie.detail"> </app-movie-details>
+      <div class="jc-end my15">
+        <button mat-raised-button [color]="isMovieInCart() ? 'warn' : 'accent'" (click)="togleMovieInCart()">
+          <mat-icon *ngIf="isMovieInCart()">remove_shopping_cart</mat-icon>
+          <mat-icon *ngIf="!isMovieInCart()">add_shopping_cart</mat-icon>
+          {{ isMovieInCart() ? "Quitar del" : "Agregar al" }} carro
+        </button>
+      </div>
+    </div>
+  </div>
+</mat-card>

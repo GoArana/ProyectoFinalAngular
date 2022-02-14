@@ -1,0 +1,24 @@
+<mat-card class="example-card w100 cart-container">
+  <img mat-card-image [src]="movie.img" [alt]="movie.name" />
+  <mat-card-header class="jc-between mat-card-header-text-display-none">
+    <div class="mr15">
+      <mat-card-title>{{ movie.name }}</mat-card-title>
+      <mat-card-subtitle class="mb0">{{
+        movie.detail.category
+      }}</mat-card-subtitle>
+    </div>
+    <button mat-mini-fab color="accent" class="not-clickeable">
+      ${{ movie.price }}
+    </button>
+  </mat-card-header>
+
+  <mat-card-actions class="d-flex-center-between actions-container">
+    <button mat-button [routerLink]="['/movie', movie.id]">
+      Mas información
+    </button>
+    <button mat-fab [color]="isMovieInCart() ? 'warn' : 'primary'"aria-label="Add or delete from cart"(click)="togleMovieInCart()">
+      <mat-icon *ngIf="isMovieInCart()">remove_shopping_cart</mat-icon>
+      <mat-icon *ngIf="!isMovieInCart()">add_shopping_cart</mat-icon>
+    </button>
+  </mat-card-actions>
+</mat-card>

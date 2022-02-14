@@ -1,0 +1,35 @@
+<div class="u-container">
+  <app-loading></app-loading>
+  <mat-card class="mt30">
+    <div class="py30 al-center fd-column">
+      <h2>Agregar película</h2>
+      <form [formGroup]="form" (ngSubmit)="setMovie()" class="w80 pt30">
+        <mat-form-field appearance="fill" class="w100">
+          <mat-label>Nombre</mat-label>
+          <input matInput required name="name" id="name" autocomplete="new-name" formControlName="name"/>
+          <app-input-error ngDefaultControl [formControl]="name" label="Nombre"
+          ></app-input-error>
+        </mat-form-field>
+        <mat-form-field appearance="fill" class="w100">
+          <mat-label>Descripcion</mat-label>
+          <input matInput required name="description" id="description" autocomplete="new-description" formControlName="description"/>
+          <app-input-error ngDefaultControl [formControl]="description" label="Descripcion"></app-input-error>
+        </mat-form-field>
+        <mat-form-field appearance="fill" class="w100">
+          <mat-label>URL Imagen</mat-label>
+          <input matInput required name="imgUrl" id="imgUrl" autocomplete="new-imgUrl" formControlName="imgUrl"/>
+          <app-input-error ngDefaultControl [formControl]="imgUrl" label="URL Imagen"></app-input-error>
+        </mat-form-field>
+        <mat-form-field appearance="fill" class="w100">
+          <mat-label>Precio</mat-label>
+          <input matInput required name="price" type="number" id="price" autocomplete="new-price" formControlName="price"/>
+          <app-input-error ngDefaultControl [formControl]="price" label="Precio"></app-input-error>
+        </mat-form-field>
+
+        <button type="submit" class="w80" mat-raised-button color="primary" [disabled]="form.invalid">
+          Agregar Película
+        </button>
+      </form>
+    </div>
+  </mat-card>
+</div>

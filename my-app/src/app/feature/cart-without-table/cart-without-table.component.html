@@ -1,0 +1,37 @@
+<div class="u-container h100">
+  <pre>{{ movies | json }}</pre>
+  <div *ngIf="movies.length">
+    <mat-list class="list">
+      <mat-list-item *ngFor="let movie of movies">
+        <div class="w100 d-flex-center-between list-container">
+          <img [src]="movie.img" alt="" width="100px" />
+          <h3 class="movie-name">
+            {{ movie.name }}
+          </h3>
+          <p>
+            {{ movie.price | currency }}
+          </p>
+          <p>
+            <button mat-icon-button color="warn" class="al-center" aria-label="Delete from cart" (click)="deleteFromCart(movie.id)">
+              <mat-icon>clear</mat-icon>
+            </button>
+          </p>
+        </div>
+        <mat-divider></mat-divider>
+      </mat-list-item>
+    </mat-list>
+    <mat-divider></mat-divider>
+    <div class="d-flex-center-between mt30 p30">
+      <h1>Total</h1>
+      <h1>{{ getTotal() | currency }}</h1>
+    </div>
+  </div>
+  <div *ngIf="!movies.length" class="d-flex-center-center h100">
+    <div class="no-movies">
+      <h2>No has agregado ninguna pelicula al carro 😢</h2>
+      <button mat-raised-button color="primary" routerLink="/home">
+        Volver al Inicio
+      </button>
+    </div>
+  </div>
+</div>

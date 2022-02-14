@@ -1,0 +1,27 @@
+.mat-list-base .mat-list-item,
+.mat-list-base .mat-list-option {
+  height: 150px !important;
+}
+.list-container {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.movie-name {
+  flex-grow: 2;
+}
+.list {
+  height: 80vh;
+  max-height: 500px;
+  overflow-y: scroll;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  box-shadow: 0px 5px 20px 5px #00000042;
+}
+
+.no-movies {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}

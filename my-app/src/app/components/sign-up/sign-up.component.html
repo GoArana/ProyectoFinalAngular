@@ -1,0 +1,22 @@
+<div class="mt30">
+  <form [formGroup]="form" (ngSubmit)="submit()">
+    <mat-form-field appearance="fill" class="w80">
+      <mat-label>Nombre</mat-label>
+      <input matInput required name="new-name" id="new-name" autocomplete="new-name" formControlName="name"/>
+      <app-input-error ngDefaultControl [formControl]="name" label="Nombre"></app-input-error>
+    </mat-form-field>
+    <mat-form-field appearance="fill" class="w80">
+      <mat-label>Apellido</mat-label>
+      <input matInput required name="new-lastname" id="new-lastname" autocomplete="new-lastname" formControlName="lastname"/>
+      <app-input-error ngDefaultControl [formControl]="lastname" label="Apellido"></app-input-error>
+    </mat-form-field>
+    <mat-form-field appearance="fill" class="w80">
+      <mat-label>Email</mat-label>
+      <input matInput required type="email" name="new-email" id="new-email" autocomplete="new-email" formControlName="email"/>
+      <app-input-error ngDefaultControl [formControl]="email" label="Email"></app-input-error>
+    </mat-form-field>
+    <button class="w80" mat-raised-button color="primary" [disabled]="form.invalid">
+      Registrarse
+    </button>
+  </form>
+</div>

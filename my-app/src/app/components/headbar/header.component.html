@@ -1,0 +1,16 @@
+<mat-toolbar class="app-toolbar" *ngIf="show">
+  <button mat-button class="mx15" routerLink="/home">BlockBuster</button>
+  <span class="example-spacer"></span>
+  <span class="welcome" *ngIf="user">Bienvenido {{ user.name + " " + user.lastname }}</span>
+  <button mat-button class="mx15" routerLink="/newMovie" *ngIf="isUserAdmin()">
+    <mat-icon>add_circle_outline</mat-icon>Nueva Película
+  </button>
+  <button mat-button class="mx15" routerLink="/">
+    <mat-icon>logout</mat-icon>Salir
+  </button>
+  <button mat-button class="mx15" routerLink="/cart">
+    <app-cart-icon class="mx15" routerLink="/cart" style="cursor: pointer"></app-cart-icon>
+  </button>
+</mat-toolbar>
+
+

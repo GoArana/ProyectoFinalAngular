@@ -1,0 +1,17 @@
+:host {
+  display: flex;
+}
+.cart-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.mat-card-header {
+  flex-grow: 1;
+}
+
+.actions-container {
+  padding-bottom: 0;
+  padding-top: 0;
+}
