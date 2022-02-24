@@ -1,10 +1,13 @@
 import { Component, OnInit } from '@angular/core';
-import { CartService } from '../../services/cart.service';
-import { Movie } from '../../models/Movie';
+import { CartService } from '../../../services/cart.service';
+import { Movie } from '../../../models/Movie';
 import { MatTableDataSource } from '@angular/material/table';
 import { Observable, Subscription } from 'rxjs';
-import { HttpService } from '../../services/http.service';
-import { MoviesService } from '../../services/movies.service';
+import { HttpService } from '../../../services/http.service';
+import { MoviesService } from '../../../services/movies.service';
+import { select,Store } from '@ngrx/store';
+import { State} from '../../../models/store';
+import { cartAddMovie, cartDeleteMovie, cartClear } from 'src/app/feature/cart/store/actions';
 
 @Component({
   selector: 'app-cart',

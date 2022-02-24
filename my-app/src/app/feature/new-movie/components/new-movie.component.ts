@@ -1,8 +1,8 @@
 import { Router } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
-import { AuthService } from '../../services/auth.service';
-import { HttpService } from '../../services/http.service';
-import { MoviesService } from '../../services/movies.service';
+import { AuthService } from '../../../services/auth.service';
+import { HttpService } from '../../../services/http.service';
+import { MoviesService } from '../../../services/movies.service';
 import {
   FormBuilder,
   Validators,

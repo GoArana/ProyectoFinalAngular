@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 import { ActivatedRoute, Router } from '@angular/router';
-import { Movie } from '../../models/Movie';
-import { MoviesService } from '../../services/movies.service';
-import { CartService } from '../../services/cart.service';
+import { Movie } from '../../../models/Movie';
+import { MoviesService } from '../../../services/movies.service';
+import { CartService } from '../../../services/cart.service';
 
 @Component({
   selector: 'app-movie-detail',

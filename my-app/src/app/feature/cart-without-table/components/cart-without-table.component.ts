@@ -1,7 +1,7 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
-import { CartService } from '../../services/cart.service';
-import { Movie } from '../../models/Movie';
-import { MoviesService } from '../../services/movies.service';
+import { CartService } from '../../../services/cart.service';
+import { Movie } from '../../../models/Movie';
+import { MoviesService } from '../../../services/movies.service';
 import { Observable, Subscription } from 'rxjs';
 
 @Component({
